@@ -245,6 +245,7 @@ function Home() {
   // Fetch project data when search input changes
   useEffect(() => {
     getProjectData();
+    // eslint-disable-next-line
   }, [searchInput]);
 
   // Render the create project modal
@@ -356,6 +357,8 @@ function Home() {
         return <Loader />;
       case projectsApiStatusConstants.failure:
         return <FailureResponse onClickRetry={onClickRetry} />;
+      default:
+        return null;
     }
   };
 

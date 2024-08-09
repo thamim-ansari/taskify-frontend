@@ -247,6 +247,7 @@ function Tasks() {
   // Fetch existing project data on component mount
   useEffect(() => {
     getExistingProjectData();
+    // eslint-disable-next-line
   }, []);
 
   // Validate new task data before submission
@@ -344,6 +345,7 @@ function Tasks() {
   // Fetch tasks data on search input or filter status change
   useEffect(() => {
     getTasksData();
+    // eslint-disable-next-line
   }, [searchInput, filterStatusValue]);
 
   // Retry fetching tasks data on failure

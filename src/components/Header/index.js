@@ -11,7 +11,6 @@ import UserContext from "../../context/UserContext";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 
-// Constants for different states of the profile API
 const navbarProfileApiStatusConstants = {
   initial: "INITIAL",
   success: "SUCCESS",
@@ -26,14 +25,11 @@ function Header() {
   );
   const [showLogoutModal, setShowLogoutModal] = useState(false);
   const navigate = useNavigate();
-
-  // Destructuring user profile data
   const firstName = userProfileData?.first_name || "";
   const lastName = userProfileData?.last_name || "";
   const role = userProfileData?.role || "";
   const profileName = (firstName[0] || "") + (lastName[0] || "");
 
-  // Function to fetch user profile data
   const getUserProfileData = async () => {
     setNavProfileApiStatus(navbarProfileApiStatusConstants.in_progress);
     const jwtToken = Cookies.get("jwt_token");
@@ -63,20 +59,18 @@ function Header() {
 
   useEffect(() => {
     getUserProfileData();
+    // eslint-disable-next-line
   }, []);
 
-  // Handles user logout
   const handleLogout = () => {
     Cookies.remove("jwt_token");
     navigate("/login", { replace: true });
     setShowLogoutModal(false);
   };
 
-  // Show and hide logout modal
   const handleLogoutModalShow = () => setShowLogoutModal(true);
   const handleLogoutModalClose = () => setShowLogoutModal(false);
 
-  // Renders the logo container
   const renderLogoContainer = () => (
     <Link to="/" className="link-remove-style">
       <div className="logo-container">
@@ -86,7 +80,6 @@ function Header() {
     </Link>
   );
 
-  // Renders the profile container with dropdown options
   const renderProfileContainer = () => (
     <>
       <Dropdown className="profile-dropdown">
@@ -145,7 +138,6 @@ function Header() {
     </>
   );
 
-  // Renders a loader spinner while fetching profile data
   const navProfileLoaderContainer = () => (
     <div>
       <ThreeCircles
@@ -160,14 +152,12 @@ function Header() {
     </div>
   );
 
-  // Renders an error icon if profile data fetch fails
   const renderNavProfileFailureView = () => (
     <div className="profile-button nav-profile-failure-container">
       <MdError color="#fc100d" size={25} />
     </div>
   );
 
-  // Determines which profile view to render based on API status
   const renderProfileView = () => {
     switch (navprofileApiStatus) {
       case navbarProfileApiStatusConstants.success:
