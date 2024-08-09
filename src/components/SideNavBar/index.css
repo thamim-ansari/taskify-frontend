@@ -1,0 +1,28 @@
+.side-nav-container {
+    background-color: #dfdfdf;
+    width: 30%;
+  }
+  @media screen and (min-width: 768px) {
+    .side-nav-container {
+      width: 10%;
+    }
+  }
+  .side-nav-links {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .side-nav-links li {
+    padding: 0.5rem 1rem;
+    font-family: "Jost", sans-serif;
+    font-weight: 500;
+    color: #181616;
+  }
+  
+  .side-nav-bar-link {
+    text-decoration: none;
+  }
+  .active-page {
+    background-color: #0d6efd;
+  }
+  

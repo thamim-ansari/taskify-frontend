@@ -1,0 +1,36 @@
+.failure-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+.failure-img{
+    width:90%;
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width:768px){
+    .failure-img{
+    width: 400px;
+}
+}
+
+.failure-container p{
+    font-family: 'poppins',sans-serif;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.failure-container button{
+    background-color: #0d6efd;
+    color: #fff;
+    font-family: 'Jost',sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.25rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}

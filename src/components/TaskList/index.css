@@ -1,0 +1,55 @@
+.task-title-status-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .task-title-status-container p {
+    margin-bottom: 0px;
+  }
+  .task-title-status-container span {
+    font-family: "Jost", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    width: 6rem;
+    text-align: center;
+  }
+  .todo-style {
+    border: 1px solid #ff5733;
+    color: #ff5733;
+  }
+  
+  .in-progress-style {
+    border: 1px solid #f3c13a;
+    color: #f3c13a;
+  }
+  
+  .success-style {
+    border: 1px solid #28a745;
+    color: #28a745;
+  }
+  
+  .edit-task-label-heading {
+    font-family: "Jost", sans-serif;
+    font-weight: 500;
+  }
+  .edit-task-footer-container {
+    border: none;
+  }
+  .task-project-title {
+    font-weight: 400;
+    font-family: "Jost", sans-serif;
+    font-size: 1rem;
+  }
+  .task-title {
+    font-family: "Jost", sans-serif;
+    font-weight: 1rem;
+    font-weight: 500;
+  }
+  .task-description {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+  }
+  

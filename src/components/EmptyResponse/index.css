@@ -1,0 +1,23 @@
+.empty-response-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+.empty-result-image{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width:768px){
+    .empty-result-image{
+        width: 400px;
+    }
+}
+
+.empty-response-container{
+    font-family: 'Jost',sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+}

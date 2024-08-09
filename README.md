@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Project Management App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This is a project management application built with React that includes user authentication, project and task management, and role-based permissions. The app utilizes React Router for navigation, React Bootstrap for styling, and various other libraries to handle state management and authentication.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **User Authentication**:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  - Users can log in or sign up.
+  - Protected routes ensure that only authenticated users can access certain pages.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Header Component**:
 
-### `npm test`
+  - Displays user profile details and an application logo.
+  - Includes a dropdown for user settings, including a logout button with a confirmation popup.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Project Management**:
 
-### `npm run build`
+  - **Create Project**: Popup form to create a new project.
+  - **Project List**: Displays a list of projects with options to edit or delete, each with its own confirmation popup.
+  - **Search**: Allows users to search for projects.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Task Management**:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  - **Create Task**: Create tasks related to projects.
+  - **Task List**: View, edit, and delete tasks, with stages including To Do, In Progress, and Done.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Role-Based Permissions**:
 
-### `npm run eject`
+  - **Member**: Can only edit or delete their own tasks and projects.
+  - **Admin**: Can edit or delete any tasks and projects.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Technologies Used
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **React**: For building the user interface.
+- **React Router DOM**: For navigation and routing.
+- **React Bootstrap**: For styling and UI components.
+- **React Loader Spinner**: For handling loading states.
+- **React Icons**: For iconography.
+- **js-cookie**: For managing JWT tokens.
+- **React Context API**: For global state management.
+- **React Hooks**: For managing state and side effects.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Setup
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Clone the repository**:
 
-## Learn More
+```
+git clone https://github.com/thamim-ansari/taskify-frontend.git
+cd taskify-frontend
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. **Install dependencies**:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+npm install
+```
 
-### Code Splitting
+3. **Start the application**:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+npm start
+```
 
-### Analyzing the Bundle Size
+4. Visit the application:
+   Open your browser and go to http://localhost:3000 to see the app in action.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Components
 
-### Making a Progressive Web App
+- **React**: For building the user interface.
+- **React Router DOM**: For navigation and routing.
+- **React Bootstrap**: For styling and UI components.
+- **React Loader Spinner**: For handling loading states.
+- **React Icons**: For iconography.
+- **js-cookie**: For managing JWT tokens.
+- **React Context API**: For global state management.
+- **React Hooks**: For managing state and side effects.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Role Permissions
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Member**: Limited to managing their own tasks and projects.
+- **Admin**: Full access to manage all tasks and projects.
